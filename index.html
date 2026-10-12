@@ -3,45 +3,106 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>稳过 · TOGAF 9.2 认证备考</title>
+<title>稳过 · TOGAF 9.2 认证备考 — 官方判分题库与模拟考</title>
+<meta name="description" content="稳过：TOGAF 9.2 认证备考 App。470 道题全考点覆盖，情景题按官方 5/3/1/0 梯度判分，三因子掌握度模型定位薄弱点，数据纯本地。">
 <style>
-  :root { --deep:#063846; --teal:#0083A2; --teal-l:#2BA7C9; --bg:#EFF4F5; --ink:#1B2B30; }
+  :root { --deep:#063846; --teal:#0083A2; --teal-l:#2BA7C9; --gold:#F2B33D; --bg:#EFF4F5; --ink:#1B2B30; --card:#fff; --border:#DDDDDD; }
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:-apple-system,"PingFang SC","Hiragino Sans GB",sans-serif; background:var(--bg); color:var(--ink); line-height:1.75; }
-  header { background:linear-gradient(135deg,#04222C,var(--teal)); color:#fff; text-align:center; padding:72px 24px 64px; }
-  header h1 { font-size:2.4rem; font-weight:700; letter-spacing:.05em; }
-  header .gold { color:#F2B33D; }
-  header p { margin-top:12px; opacity:.9; font-size:1.05rem; }
-  main { max-width:720px; margin:0 auto; padding:40px 24px 64px; }
-  .card { background:#fff; border:1px solid #DDDDDD; border-radius:14px; padding:26px 28px; margin-bottom:20px; }
-  .card h2 { font-size:1.15rem; margin-bottom:8px; color:var(--deep); }
-  .card p { color:#41545b; font-size:.98rem; }
-  a.btn { display:inline-block; margin-top:14px; padding:10px 22px; border-radius:999px; background:var(--teal); color:#fff; text-decoration:none; font-size:.95rem; }
-  a.btn:hover { background:var(--teal-l); }
-  footer { text-align:center; color:#717171; font-size:.85rem; padding:28px 16px 44px; }
+  nav { position:sticky; top:0; background:rgba(6,56,70,.92); backdrop-filter:blur(8px); color:#fff; display:flex; align-items:center; gap:22px; padding:14px 28px; z-index:10; }
+  nav .brand { font-weight:700; font-size:1.05rem; margin-right:auto; }
+  nav .gold { color:var(--gold); }
+  nav a { color:#cfe6ec; text-decoration:none; font-size:.92rem; }
+  nav a:hover { color:#fff; }
+  .hero { background:linear-gradient(135deg,#04222C,var(--teal)); color:#fff; text-align:center; padding:64px 20px 0; }
+  .hero h1 { font-size:clamp(1.8rem,4.5vw,2.8rem); font-weight:800; letter-spacing:.04em; }
+  .hero h1 .gold { color:var(--gold); }
+  .hero p.sub { margin:14px auto 22px; max-width:640px; opacity:.92; font-size:clamp(1rem,2.2vw,1.15rem); }
+  .badges { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-bottom:34px; }
+  .badges span { background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.35); border-radius:999px; padding:7px 18px; font-size:.9rem; }
+  .hero img { max-width:980px; width:92%; border-radius:18px 18px 0 0; box-shadow:0 18px 50px rgba(0,20,26,.45); display:block; margin:0 auto; }
+  main { max-width:980px; margin:0 auto; padding:56px 22px 40px; }
+  h2.sec { text-align:center; font-size:1.5rem; color:var(--deep); margin-bottom:8px; }
+  p.sec-sub { text-align:center; color:#5b6f76; margin-bottom:34px; font-size:.98rem; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); gap:18px; margin-bottom:60px; }
+  .feat { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:24px; }
+  .feat .ico { font-size:1.7rem; }
+  .feat h3 { font-size:1.08rem; color:var(--deep); margin:8px 0 6px; }
+  .feat p { font-size:.94rem; color:#41545b; }
+  table { width:100%; border-collapse:collapse; background:var(--card); border-radius:16px; overflow:hidden; box-shadow:0 2px 10px rgba(6,56,70,.06); }
+  th, td { padding:14px 18px; text-align:center; font-size:.96rem; border-bottom:1px solid #e7edee; }
+  th { background:var(--deep); color:#fff; font-weight:600; }
+  td:first-child { text-align:left; font-weight:600; color:var(--deep); }
+  tr:last-child td { border-bottom:none; }
+  .yes { color:#1a9850; font-weight:700; }
+  .price { font-size:1.25rem; font-weight:800; color:var(--teal); }
+  .cta { text-align:center; margin:52px 0 10px; }
+  .cta a.btn { display:inline-block; margin:8px 10px; padding:14px 34px; border-radius:999px; background:var(--teal); color:#fff; text-decoration:none; font-size:1.02rem; font-weight:600; box-shadow:0 6px 18px rgba(0,131,162,.35); }
+  .cta a.btn:hover { background:var(--teal-l); }
+  .cta a.free { background:var(--deep); }
+  .note { text-align:center; color:#717171; font-size:.86rem; margin-top:14px; }
+  footer { text-align:center; color:#717171; font-size:.85rem; padding:30px 16px 46px; line-height:2; }
+  footer a { color:var(--teal); }
+  @media (max-width:600px){ th,td{ padding:10px 8px; font-size:.85rem; } }
 </style>
 </head>
 <body>
-<header>
-  <h1>稳过 <span class="gold">TOGAF 9</span></h1>
-  <p>TOGAF 9.2 认证备考 · 470 道题全考点 · 数据纯本地</p>
-</header>
+<nav>
+  <span class="brand">稳过 <span class="gold">TOGAF 9</span></span>
+  <a href="#features">功能</a>
+  <a href="#compare">版本对比</a>
+  <a href="support.html">支持</a>
+  <a href="privacy.html">隐私政策</a>
+</nav>
+
+<div class="hero">
+  <h1>考前 14 天，<span class="gold">稳过</span></h1>
+  <p class="sub">TOGAF 9.2 认证备考：470 道题全考点覆盖，情景题按官方梯度判分，掌握度模型把时间花在最薄弱的考点上。</p>
+  <div class="badges">
+    <span>470 道题 · 41 个考点</span>
+    <span>官方 5/3/1/0 判分</span>
+    <span>数据纯本地 · 无广告</span>
+  </div>
+  <img src="hero.jpg" alt="稳过 TOGAF 9 应用预览">
+</div>
+
 <main>
-  <div class="card">
-    <h2>关于本应用</h2>
-    <p>「稳过」是一款为 TOGAF 9.2 认证考试打造的纯本地备考工具：题库覆盖全部考纲知识点，情景题按官方 5/3/1/0 梯度判分，掌握度模型帮你定位薄弱考点。提供完整版（付费下载）与 Free 版（免费下载 + 一次性内购解锁）两个版本。</p>
+  <h2 class="sec" id="features">核心功能</h2>
+  <p class="sec-sub">为「一次通过」设计的完整备考闭环</p>
+  <div class="grid">
+    <div class="feat"><div class="ico">📚</div><h3>全考点题库</h3><p>基础段单选 + 情景段案例分析共 470 道，覆盖 TOGAF 9.2 两级考纲全部 41 个考点，每题配详细解析与考点标注。</p></div>
+    <div class="feat"><div class="ico">🎯</div><h3>官方判分口径</h3><p>情景题按官方最佳 5 分 / 次佳 3 分 / 第三 1 分 / 干扰项 0 分梯度计分；模拟考通过线与官方一致（基础段 55% / 情景段 60%）。</p></div>
+    <div class="feat"><div class="ico">📈</div><h3>掌握度模型</h3><p>正确率 × 置信度 × 时间衰减三因子计算每个考点掌握度，大纲树直接标色，薄弱点一目了然。</p></div>
+    <div class="feat"><div class="ico">🗓️</div><h3>今日计划</h3><p>设置考试日期与每周学习时长，自动生成每日 8 题计划，优先推送薄弱考点，考前正好覆盖全部弱项。</p></div>
+    <div class="feat"><div class="ico">⏱️</div><h3>全真模拟考</h3><p>基础段 40 题 / 60 分钟、情景段 8 题 / 90 分钟、两段连考，倒计时自动交卷，交卷后逐题回顾得分档位。</p></div>
+    <div class="feat"><div class="ico">🔒</div><h3>隐私优先</h3><p>所有数据仅存于本机：无账号、无追踪、无第三方统计。进度可一键导出 JSON 备份，换机不丢数据。</p></div>
   </div>
-  <div class="card">
-    <h2>数据与隐私</h2>
-    <p>所有学习数据仅保存在你的设备本地：无账号体系、无第三方统计、无追踪。删除 App 即彻底删除数据。</p>
-    <a class="btn" href="privacy.html">查看隐私政策</a>
-  </div>
-  <div class="card">
-    <h2>支持</h2>
-    <p>常见问题（购买恢复、进度导出导入、7 天签名过期等）与联系方式请见支持页面。</p>
-    <a class="btn" href="support.html">进入支持页面</a>
+
+  <h2 class="sec" id="compare">两个版本</h2>
+  <p class="sec-sub">按你的习惯选择：一步到位，或先试后买</p>
+  <table>
+    <tr><th> </th><th>稳过-TOGAF9（完整版）</th><th>稳过Free</th></tr>
+    <tr><td>价格</td><td class="price">一次性买断</td><td class="price">免费下载</td></tr>
+    <tr><td>题库</td><td class="yes">✓ 全部 470 道题</td><td>24 道精选题</td></tr>
+    <tr><td>情景题官方判分</td><td class="yes">✓</td><td class="yes">✓（已解锁题）</td></tr>
+    <tr><td>掌握度模型 / 今日计划</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+    <tr><td>模拟考试 / 错题重练</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+    <tr><td>解锁全部题目</td><td>下载即含</td><td>一次性内购，无订阅</td></tr>
+  </table>
+
+  <div class="cta">
+    <a class="btn" href="https://apps.apple.com/" target="_blank" rel="noopener">App Store 下载完整版</a>
+    <a class="btn free" href="https://apps.apple.com/" target="_blank" rel="noopener">免费下载 Free 版</a>
+    <p class="note">上架后此按钮将替换为两个版本的真实 App Store 链接。</p>
   </div>
 </main>
-<footer>© 2026 稳过 · 本应用为独立备考资料，与 The Open Group 无隶属关系。TOGAF 是 The Open Group 的注册商标。</footer>
+
+<footer>
+  © 2026 稳过 ·
+  <a href="privacy.html">隐私政策</a> ·
+  <a href="support.html">支持与常见问题</a> ·
+  <a href="https://github.com/bstxzq/togaf-study/issues" target="_blank" rel="noopener">反馈问题</a><br>
+  本应用为独立备考资料，与 The Open Group 无隶属或合作关系。TOGAF 是 The Open Group 的注册商标。
+</footer>
 </body>
 </html>
